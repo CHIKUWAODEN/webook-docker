@@ -1,3 +1,6 @@
 [submodule "book/webook-sample"]
 	path = book/webook-sample
 	url = https://github.com/CHIKUWAODEN/webook-sample.git
+[submodule "book/webook"]
+	path = book/webook
+	url = https://github.com/CHIKUWAODEN/webook.git
