@@ -1,15 +1,20 @@
 build:
 	docker build -t webook .
 
+rebuild:
+	docker build -t webook --nocache .
 
 run: build
 	-docker rm webook
 	docker run \
+	--privileged \
 	--interactive \
 	--tty \
-	--volume `pwd`/book:/book \
+	--volume `pwd`/:/webook-docker \
 	--name webook \
-	webook:latest /bin/bash
+	-p 13001:13001 \
+	webook:latest
 
-shell: run
-	docker exec -it webook /bin/bash
+
+webook_build:
+	docker exec -t webook "cd /webook-docker/hello && webook build"
