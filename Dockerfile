@@ -41,7 +41,7 @@ RUN git clone https://github.com/CHIKUWAODEN/webook.git webook && \
     sudo gem install bundler && \
     bundle install && \
     rake build && \
-    sudo gem install --local ./pkg/webook-0.0.1.gem && \
+    sudo gem install --local ./pkg/webook-0.0.2.gem && \
     webook
 
 
